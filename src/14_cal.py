@@ -29,4 +29,15 @@ it should use today’s date to get the month and year.
 
 import sys
 import calendar
-from datetime import datetime
+import datetime
+
+time = datetime.datetime.now()
+def calendarProgram(month = time.month, year = time.year):
+  if(month < 1 or month > 12):
+    return "You need a month to use this functon!"
+  else:
+    return calendar.prmonth(year, month)
+
+print(calendarProgram())
+print(calendarProgram(2020, 13))
+print(calendarProgram(2))
